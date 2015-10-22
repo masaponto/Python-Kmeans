@@ -58,7 +58,7 @@ class KMeans:
             plt.plot(x[0], x[1], colors[i] + '.')
 
         plt.show()
-        plt.savefig('figures/kmeans.png')
+
 
 
 def main():
@@ -70,7 +70,7 @@ def main():
     X_train, X_test, y_train, y_test = cross_validation.train_test_split(
         data_set.data, data_set.target, test_size=0.4, random_state=0)
 
-    kmeans = KMeans(5, n=1000)
+    kmeans = KMeans(3, n=1000)
     kmeans.fit(X_train)
     kmeans.plot(X_train)
 
